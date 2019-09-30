@@ -108,7 +108,7 @@ public class QSFactoryImpl implements QSFactory {
             Provider<UiModeNightTile> uiModeNightTileProvider,
             Provider<LteTile> lteTileProvider,
             Provider<AODTile> aodTileProvider,
-            Provider<CaffeineTile> caffeineTileProvider) {
+            Provider<CaffeineTile> caffeineTileProvider,
             Provider<WeatherTile> weatherTileProvider) {
         mWifiTileProvider = wifiTileProvider;
         mBluetoothTileProvider = bluetoothTileProvider;
