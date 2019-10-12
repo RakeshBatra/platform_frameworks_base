@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2017 The Android Open Source Project
  *
@@ -45,7 +46,6 @@ import com.android.systemui.qs.tiles.LocationTile;
 import com.android.systemui.qs.tiles.LteTile;
 import com.android.systemui.qs.tiles.NfcTile;
 import com.android.systemui.qs.tiles.NightDisplayTile;
-import com.android.systemui.qs.tiles.RebootTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.UiModeNightTile;
 import com.android.systemui.qs.tiles.SoundTile;
@@ -90,7 +90,6 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<CaffeineTile> mCaffeineTileProvider;
     private final Provider<WeatherTile> mWeatherTileProvider;
     private final Provider<SoundTile> mSoundTileProvider;
-    private final Provider<RebootTile> mRebootTileProvider;
     private final Provider<ScreenshotTile> mScreenshotTileProvider;
     private final Provider<HeadsUpTile> mHeadsUpTileProvider;
     private final Provider<HWKeysTile> mHWKeysTileProvider;
@@ -121,13 +120,13 @@ public class QSFactoryImpl implements QSFactory {
             Provider<LteTile> lteTileProvider,
             Provider<AODTile> aodTileProvider,
             Provider<WeatherTile> weatherTileProvider,
-            Provider<SoundTile> soundTileProvider,
             Provider<CaffeineTile> caffeineTileProvider,
             Provider<RebootTile> rebootTileProvider,
             Provider<ScreenshotTile> screenshotTileProvider,
             Provider<HeadsUpTile> headsUpTileProvider,
             Provider<HWKeysTile> hWKeysTileProvider,
-            Provider<UsbTetherTile> usbTetherTileProvider) {
+            Provider<UsbTetherTile> usbTetherTileProvider,
+            Provider<SoundTile> soundTileProvider) {
         mWifiTileProvider = wifiTileProvider;
         mBluetoothTileProvider = bluetoothTileProvider;
         mCellularTileProvider = cellularTileProvider;
@@ -152,7 +151,6 @@ public class QSFactoryImpl implements QSFactory {
         mCaffeineTileProvider = caffeineTileProvider;
         mWeatherTileProvider = weatherTileProvider;
         mSoundTileProvider = soundTileProvider;
-        mRebootTileProvider = rebootTileProvider;
         mScreenshotTileProvider = screenshotTileProvider;
         mHeadsUpTileProvider = headsUpTileProvider;
         mHWKeysTileProvider = hWKeysTileProvider;
@@ -220,9 +218,7 @@ public class QSFactoryImpl implements QSFactory {
                 return mWeatherTileProvider.get();
             case "sound":
                 return mSoundTileProvider.get();
-            case "reboot":
-                return mRebootTileProvider.get();
-            case "screenshot":
+	    case "screenshot":
                 return mScreenshotTileProvider.get();
             case "heads_up":
                 return mHeadsUpTileProvider.get();
