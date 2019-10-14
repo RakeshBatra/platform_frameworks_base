@@ -26,5 +26,7 @@
         aod,caffeine
     </string>
 
+    <!-- Max visible system icons -->
+    <integer name="config_maxVisibleStatusIconContainer">6</integer>
 </resources>
 
