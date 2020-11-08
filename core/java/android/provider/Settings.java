@@ -6213,6 +6213,12 @@ public final class Settings {
         public static final String RETICKER_STATUS = "reticker_status";
         public static final String RETICKER_COLORED = "reticker_colored";
 
+        /** Whether to pulse ambient on new music tracks
+         *
+         * @hide
+         */
+        public static final String PULSE_ON_NEW_TRACKS = "pulse_on_new_tracks";
+
         /**
 	* Whether to use accent lock clock colors custom
         * @hide
