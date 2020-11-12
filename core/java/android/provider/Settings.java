@@ -6209,6 +6209,10 @@ public final class Settings {
          */
         public static final String SWITCH_STYLE = "switch_style";
 
+        /** reTicker **/
+        public static final String RETICKER_STATUS = "reticker_status";
+        public static final String RETICKER_COLORED = "reticker_colored";
+
         /**
 	* Whether to use accent lock clock colors custom
         * @hide
