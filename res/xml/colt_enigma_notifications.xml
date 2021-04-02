@@ -94,6 +94,28 @@
 
     <PreferenceCategory
 
+        android:key="reticker"
+        android:title="@string/reticker_category" >
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="reticker_status"
+            android:title="@string/reticker_title"
+            android:summary="@string/reticker_summary"
+            android:order="9"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:dependency="reticker_status"
+            android:key="reticker_colored"
+            android:title="@string/reticker_colored_title"
+            android:summary="@string/reticker_colored_summary"
+            android:order="10"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+
         android:title="@string/notification_led_category_title" >
 
         <Preference
