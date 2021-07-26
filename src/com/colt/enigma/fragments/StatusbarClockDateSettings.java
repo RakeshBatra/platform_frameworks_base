@@ -291,7 +291,7 @@ public class StatusbarClockDateSettings extends SettingsPreferenceFragment
             return true;
          } else if (preference == mQsClockSize) {
                 int width = ((Integer)newValue).intValue();
-                Settings.System.putInt(resolver,
+                Settings.System.putInt(getActivity().getContentResolver(),
                         Settings.System.QS_HEADER_CLOCK_SIZE, width);
             return true;
          }
